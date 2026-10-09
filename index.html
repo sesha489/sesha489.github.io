@@ -1,3 +1,118 @@
+<!--<!DOCTYPE html>
+<html>
+	<head>
+		<title>Shortcut</title>
+		<style>
+		.box {
+			position: absolute;
+			width: 200px;
+			height: 100px;
+			background-color: White;
+			//border-color: #BFBFBF;
+			//border: 1px #9F9F9F;
+			border-radius: 10px;
+			padding: 20px;
+			box-shadow: 0px 0px 10px #000000;
+			color: black;
+			font-weight: bold;
+			cursor: move;
+		}
+		.card{
+			width: 180px;
+			height: 20px;
+			background-color: White;
+			//border-color: #BFBFBF;
+			//border: 1px #9F9F9F;
+			border-radius: 5px;
+			padding: 5px;
+			margin-top: 10px;
+			box-shadow: 0px 0px 5px #000000;
+			color: black;
+			font-weight: normal;
+		}
+		</style>
+	</head>
+	<body onclick="myClickEvent(event)">
+		<h2>Shortcuts page</h2>
+		<p style="font-size: 16px">Note: sign in required in respective sites</p>
+		<p>
+			<a href="https://www.google.co.in" target="_blank"><img src="https://lh3.googleusercontent.com/COxitqgJr1sJnIDe8-jiKhxDx1FrYbtRHKJ9z_hELisAlapwE9LUPh6fcXIfb5vwpbMl4xl9H9TRFPc5NOO8Sb3VSgIBrfRYvW6cUA" style="width:75px;height:75px;" alt="Google"></a>
+			<a href="https://docs.google.com/document/" target="_blank"><img src="https://lh3.googleusercontent.com/1DECuhPQ1y2ppuL6tdEqNSuObIm_PW64w0mNhm3KGafi40acOJkc4nvsZnThoDKTH8gWyxAnipJmvCiszX8R6UAUu1UyXPfF13d7" style="width:75px;height:75px;" alt="Google docs"></a>
+			<a href="https://docs.google.com/spreadsheets/" target="_blank"><img src="https://lh3.googleusercontent.com/yCF7mTvXRF_EhDf7Kun5_-LMYTbD2IL-stx_D97EzpACfhpGjY_Frx8NZw63rSn2dME0v8-Im49Mh16htvPAGmEOMhiTxDZzo6rB7MY" style="width:75px;height:75px;" alt="Google sheets"></a>
+			<a href="https://drive.google.com" target="_blank"><img src="https://lh3.googleusercontent.com/rCwHBRBJV4wFiEIN_Mlboj94_TGJxyJtBh-MBFL4y1aZdO4hb7_Uc_PpXRyAoN7O9m_Zc1wSyp3H1vsnb829QE7t9KyGNJY9A1a3QQ" style="width:75px;height:75px;" alt="Google drive"></a><br>
+		</p>
+		<p>
+			<a href="https://www.office.com" target="_blank">Microsoft 365</a><br>
+			<a href="https://office.com/launch/word" target="_blank">Microsoft word</a><br>
+			<a href="https://office.com/launch/excel" target="_blank">Microsoft sheets</a><br>
+			<a href="https://onedrive.live.com" target="_blank">Microsoft onedrive</a><br>
+		</p>
+		<p>
+			<a href="https://github.com/login" target="_blank">Github login</a><br>
+			<a href="https://atlassian.com/" target="_blank">Atlassian</a><br>
+		</p>
+		<p id="clickPos"></p>
+		<div id="list1" class="box">
+			Automation
+			<div id="list1card1" class="card">
+				Handheld device
+			</div>
+			<div id="list1card2" class="card">
+				Ethernet
+			</div>
+		</div>-->
+		<!--<div id="dragBox" class="box" draggable="true">
+			This is a dragable box.
+		</div>-->
+		<!--<script>
+			//dragElement(document.getElementById("dragBox"));
+			function myClickEvent(event){
+				let x = event.clientX;
+				let y = event.clientY;
+				let text = x + " ," + y;
+				document.getElementById("clickPos").innerHTML = text;
+			}
+			/*function dragElement(elmnt){
+				var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+				//document.getElementById(elmnt.id).onmousedown = dragMouseDown;
+				elmnt.onmousedown=dragMouseDown;
+				function dragMouseDown(e){
+					e = e || window.event;
+					e = preventDefault();
+					pos3 = e.clientX;
+					pos4 = e.clientY;
+					document.onmousemove = elementDrag;
+				}
+				function elementDrag(e){
+					e = e || window.event;
+					e = preventDefault();
+					pos1 = pos3 - e.clientX;
+					pos2 = pos4 - e.clientX;
+					pos3 = e.clientX;
+					pos4 = e.clientY;
+					elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+					elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+				}
+			}*/
+			
+			/*const box = document.getElementById('dragBox');
+
+    		document.addEventListener('click', (event) => {
+      			const x = event.clientX;
+      			const y = event.clientY;
+
+      			// Adjust to center the box on the click
+      			const boxWidth = box.offsetWidth;
+      			const boxHeight = box.offsetHeight;
+
+      			box.style.left = `${x - boxWidth / 2}px`;
+      			box.style.top = `${y - boxHeight / 2}px`;
+    		});*/
+
+		</script>
+	</body>
+</html>-->
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -62,16 +177,17 @@
         .box {
             position: relative;
             width: 190px;
-            height: auto;
+            height: stretch;
             background-color: White;
             padding: 10px;
             color: black;
             font-weight: bold;
             cursor: move;
+			color: Blue;
         }
         .card {
             width: 180px;
-            /* min-height: 20px; */
+            //min-height: 20px;
             background-color: White;
             border-radius: 2px;
             padding: 5px;
@@ -85,8 +201,8 @@
 			display:flex;
 			padding:15px;
 			padding-top:0px;
-			/* border-radius:10px; */
-			/* box-shadow:0px 0px 10px #000000; */
+			//border-radius:10px;
+			//box-shadow:0px 0px 10px #000000;
 			background:white;
 		}
 
@@ -124,7 +240,7 @@
 			border-radius:50%;
 		}
     </style>
-	<h1 style="margin: 0px; box-sizing: border-box; width: 100%; height: 80px; padding: 20px; background-color: WhiteSmoke; Color: DarkBlue;box-shadow:0px 10px 10px Grey;">Home</h1>
+	<h1 style="margin: 0px; box-sizing: border-box; width: 100%; height: 80px; padding: 20px; background-color: WhiteSmoke; Color: DarkBlue;box-shadow:0px 5px 5px Grey;">Home</h1>
 </head>
 <body onclick="myClickEvent(event)" style="margin: 0px; font-family: Calibri;background-color: LightSteelBlue;">
 
@@ -133,14 +249,14 @@
 		<div style="display:flex; flex-direction:column; background-color: White;">
 			<h3 style="margin-right: 20px; margin-left:20px; padding-bottom: 10px; border-bottom: 2px solid Blue; color: Blue">Quick Launch</h3>
 			<div class="icons">
-				<a href="https://www.google.co.in" target="_blank"><img src="https://lh3.googleusercontent.com/COxitqgJr1sJnIDe8-jiKhxDx1FrYbtRHKJ9z_hELisAlapwE9LUPh6fcXIfb5vwpbMl4xl9H9TRFPc5NOO8Sb3VSgIBrfRY[...]
-				<a href="https://docs.google.com/document/" target="_blank"><img src="https://lh3.googleusercontent.com/1DECuhPQ1y2ppuL6tdEqNSuObIm_PW64w0mNhm3KGafi40acOJkc4nvsZnThoDKTH8gWyxAnipJmvCiszX8R6UA[...]
-				<a href="https://docs.google.com/spreadsheets/" target="_blank"><img src="https://lh3.googleusercontent.com/yCF7mTvXRF_EhDf7Kun5_-LMYTbD2IL-stx_D97EzpACfhpGjY_Frx8NZw63rSn2dME0v8-Im49Mh16htvP[...]
-				<a href="https://drive.google.com" target="_blank"><img src="https://lh3.googleusercontent.com/rCwHBRBJV4wFiEIN_Mlboj94_TGJxyJtBh-MBFL4y1aZdO4hb7_Uc_PpXRyAoN7O9m_Zc1wSyp3H1vsnb829QE7t9KyGNJY9[...]
+				<a href="https://www.google.co.in" target="_blank"><img src="https://lh3.googleusercontent.com/COxitqgJr1sJnIDe8-jiKhxDx1FrYbtRHKJ9z_hELisAlapwE9LUPh6fcXIfb5vwpbMl4xl9H9TRFPc5NOO8Sb3VSgIBrfRYvW6cUA" alt="Google"><br>Google</a>
+				<a href="https://docs.google.com/document/" target="_blank"><img src="https://lh3.googleusercontent.com/1DECuhPQ1y2ppuL6tdEqNSuObIm_PW64w0mNhm3KGafi40acOJkc4nvsZnThoDKTH8gWyxAnipJmvCiszX8R6UAUu1UyXPfF13d7" alt="Google docs"><br>Docs</a>
+				<a href="https://docs.google.com/spreadsheets/" target="_blank"><img src="https://lh3.googleusercontent.com/yCF7mTvXRF_EhDf7Kun5_-LMYTbD2IL-stx_D97EzpACfhpGjY_Frx8NZw63rSn2dME0v8-Im49Mh16htvPAGmEOMhiTxDZzo6rB7MY" alt="Google sheets"><br>Sheets</a>
+				<a href="https://drive.google.com" target="_blank"><img src="https://lh3.googleusercontent.com/rCwHBRBJV4wFiEIN_Mlboj94_TGJxyJtBh-MBFL4y1aZdO4hb7_Uc_PpXRyAoN7O9m_Zc1wSyp3H1vsnb829QE7t9KyGNJY9A1a3QQ" alt="Google drive"><br>Drive</a>
 				<a href="https://www.office.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft 365"><br>Microsoft</a>
-				<a href="https://office.com/launch/word" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Microsoft_Office_Word_%282019%E2%80%932025%29.svg" alt="Microsoft Word">[...]
-				<a href="https://office.com/launch/excel" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Microsoft_Office_Excel_%282019%E2%80%932025%29.svg" alt="Microsoft Exce[...]
-				<a href="https://onedrive.live.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Microsoft_Office_OneDrive_%282019%E2%80%932025%29.svg" alt="Microsoft OneDriv[...]
+				<a href="https://office.com/launch/word" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Microsoft_Office_Word_%282019%E2%80%932025%29.svg" alt="Microsoft Word"><br>Word</a>
+				<a href="https://office.com/launch/excel" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Microsoft_Office_Excel_%282019%E2%80%932025%29.svg" alt="Microsoft Excel"><br>Excel</a>
+				<a href="https://onedrive.live.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Microsoft_Office_OneDrive_%282019%E2%80%932025%29.svg" alt="Microsoft OneDrive"><br>One Drive</a>
 				<a href="https://github.com/login" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub"><br>Github</a>
 				<a href="https://atlassian.com/" target="_blank"><img src="https://www.atlassian.com/favicon.ico" alt="Atlassian"><br>Atlassian</a>
 				<a href="https://www.pythonanywhere.com/login/" target="_blank"><img src="https://www.pythonanywhere.com/static/anywhere/images/PA-logo-large-icononly.png" alt="PythonAnywhere"><br>PyAny</a>
@@ -297,10 +413,10 @@
 
 			drawCalendar();
 		</script>
-		<div id="calendar" class="calendar" style="width: auto;">
-			<div style="display:flex; flex-direction:column; width: auto;">
+		<div id="calendar" class="calendar" style="width: stretch;">
+			<div style="display:flex; flex-direction:column; width: stretch;">
 				<h3 style="padding-bottom: 10px; border-bottom: 2px solid Blue; color: Blue">Pending task list</h3>
-				<p style="height: auto; margin-top: 0px; border: 2px solid #ccc; padding: 10px;">1. Valve template delivery.</p>
+				<p style="height: stretch; margin-top: 0px; border: 2px solid #ccc; padding: 10px;">1. Valve template delivery.</p>
 			</div>
 		</div>
 	</div>
@@ -319,7 +435,7 @@
 		}
 
         const lists = [
-            { title: "Automation", cards: ["PID Controller", "Modbus Tool", "Ethernet/IP Tool", "Profinet Tool", "Profibus Tool", "OPC UA Tool", "PLC software", "HMI/SCADA software", "3D SCADA", "Workbench", "PCB design", "Automation tech stack"] },
+            { title: "Automation", cards: ["PID Controller", "Modbus Tool", "Ethernet/IP Tool", "Profinet Tool", "Profibus Tool", "OPC UA Tool", "PLC software", "HMI/SCADA software", "3D SCADA", "EIP & Profi inspector"] },
             { title: "Embedded", cards: ["Scout robot V1", "Scout robot V2", "Modbus handheld device", "TCP stack", "COSMO custom lite OS", "Cyberdeck"] },
 			{ title: "Journal", cards: ["Modbus", "Ethernet IP", "Profibus and profinet"] },
             { title: "Games", cards: ["Station master", "Rat infestation", "Espionage", "Novel", "Custom console"] },
