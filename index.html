@@ -62,7 +62,7 @@
         .box {
             position: relative;
             width: 190px;
-            height: stretch;
+            height: auto;
             background-color: White;
             padding: 10px;
             color: black;
@@ -71,7 +71,7 @@
         }
         .card {
             width: 180px;
-            //min-height: 20px;
+            /* min-height: 20px; */
             background-color: White;
             border-radius: 2px;
             padding: 5px;
@@ -85,8 +85,8 @@
 			display:flex;
 			padding:15px;
 			padding-top:0px;
-			//border-radius:10px;
-			//box-shadow:0px 0px 10px #000000;
+			/* border-radius:10px; */
+			/* box-shadow:0px 0px 10px #000000; */
 			background:white;
 		}
 
@@ -133,14 +133,14 @@
 		<div style="display:flex; flex-direction:column; background-color: White;">
 			<h3 style="margin-right: 20px; margin-left:20px; padding-bottom: 10px; border-bottom: 2px solid Blue; color: Blue">Quick Launch</h3>
 			<div class="icons">
-				<a href="https://www.google.co.in" target="_blank"><img src="https://lh3.googleusercontent.com/COxitqgJr1sJnIDe8-jiKhxDx1FrYbtRHKJ9z_hELisAlapwE9LUPh6fcXIfb5vwpbMl4xl9H9TRFPc5NOO8Sb3VSgIBrfRYvW6cU[...]
-				<a href="https://docs.google.com/document/" target="_blank"><img src="https://lh3.googleusercontent.com/1DECuhPQ1y2ppuL6tdEqNSuObIm_PW64w0mNhm3KGafi40acOJkc4nvsZnThoDKTH8gWyxAnipJmvCiszX8R6UAUu1Uy[...]
-				<a href="https://docs.google.com/spreadsheets/" target="_blank"><img src="https://lh3.googleusercontent.com/yCF7mTvXRF_EhDf7Kun5_-LMYTbD2IL-stx_D97EzpACfhpGjY_Frx8NZw63rSn2dME0v8-Im49Mh16htvPAGmEO[...]
-				<a href="https://drive.google.com" target="_blank"><img src="https://lh3.googleusercontent.com/rCwHBRBJV4wFiEIN_Mlboj94_TGJxyJtBh-MBFL4y1aZdO4hb7_Uc_PpXRyAoN7O9m_Zc1wSyp3H1vsnb829QE7t9KyGNJY9A1a3Q[...]
+				<a href="https://www.google.co.in" target="_blank"><img src="https://lh3.googleusercontent.com/COxitqgJr1sJnIDe8-jiKhxDx1FrYbtRHKJ9z_hELisAlapwE9LUPh6fcXIfb5vwpbMl4xl9H9TRFPc5NOO8Sb3VSgIBrfRY[...]
+				<a href="https://docs.google.com/document/" target="_blank"><img src="https://lh3.googleusercontent.com/1DECuhPQ1y2ppuL6tdEqNSuObIm_PW64w0mNhm3KGafi40acOJkc4nvsZnThoDKTH8gWyxAnipJmvCiszX8R6UA[...]
+				<a href="https://docs.google.com/spreadsheets/" target="_blank"><img src="https://lh3.googleusercontent.com/yCF7mTvXRF_EhDf7Kun5_-LMYTbD2IL-stx_D97EzpACfhpGjY_Frx8NZw63rSn2dME0v8-Im49Mh16htvP[...]
+				<a href="https://drive.google.com" target="_blank"><img src="https://lh3.googleusercontent.com/rCwHBRBJV4wFiEIN_Mlboj94_TGJxyJtBh-MBFL4y1aZdO4hb7_Uc_PpXRyAoN7O9m_Zc1wSyp3H1vsnb829QE7t9KyGNJY9[...]
 				<a href="https://www.office.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft 365"><br>Microsoft</a>
-				<a href="https://office.com/launch/word" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Microsoft_Office_Word_%282019%E2%80%932025%29.svg" alt="Microsoft Word"><br>W[...]
-				<a href="https://office.com/launch/excel" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Microsoft_Office_Excel_%282019%E2%80%932025%29.svg" alt="Microsoft Excel"><b[...]
-				<a href="https://onedrive.live.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Microsoft_Office_OneDrive_%282019%E2%80%932025%29.svg" alt="Microsoft OneDrive"><b[...]
+				<a href="https://office.com/launch/word" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Microsoft_Office_Word_%282019%E2%80%932025%29.svg" alt="Microsoft Word">[...]
+				<a href="https://office.com/launch/excel" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Microsoft_Office_Excel_%282019%E2%80%932025%29.svg" alt="Microsoft Exce[...]
+				<a href="https://onedrive.live.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Microsoft_Office_OneDrive_%282019%E2%80%932025%29.svg" alt="Microsoft OneDriv[...]
 				<a href="https://github.com/login" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub"><br>Github</a>
 				<a href="https://atlassian.com/" target="_blank"><img src="https://www.atlassian.com/favicon.ico" alt="Atlassian"><br>Atlassian</a>
 				<a href="https://www.pythonanywhere.com/login/" target="_blank"><img src="https://www.pythonanywhere.com/static/anywhere/images/PA-logo-large-icononly.png" alt="PythonAnywhere"><br>PyAny</a>
@@ -297,10 +297,10 @@
 
 			drawCalendar();
 		</script>
-		<div id="calendar" class="calendar" style="width: stretch;">
-			<div style="display:flex; flex-direction:column; width: stretch;">
+		<div id="calendar" class="calendar" style="width: auto;">
+			<div style="display:flex; flex-direction:column; width: auto;">
 				<h3 style="padding-bottom: 10px; border-bottom: 2px solid Blue; color: Blue">Pending task list</h3>
-				<p style="height: stretch; margin-top: 0px; border: 2px solid #ccc; padding: 10px;">1. Valve template delivery.</p>
+				<p style="height: auto; margin-top: 0px; border: 2px solid #ccc; padding: 10px;">1. Valve template delivery.</p>
 			</div>
 		</div>
 	</div>
@@ -319,7 +319,7 @@
 		}
 
         const lists = [
-            { title: "Automation", cards: ["PID Controller", "Modbus Tool", "Ethernet/IP Tool", "Profinet Tool", "Profibus Tool", "OPC UA Tool", "PLC software", "HMI/SCADA software", "3D SCADA", "EIP [...]
+            { title: "Automation", cards: ["PID Controller", "Modbus Tool", "Ethernet/IP Tool", "Profinet Tool", "Profibus Tool", "OPC UA Tool", "PLC software", "HMI/SCADA software", "3D SCADA", "Workbench", "PCB design", "Automation tech stack"] },
             { title: "Embedded", cards: ["Scout robot V1", "Scout robot V2", "Modbus handheld device", "TCP stack", "COSMO custom lite OS", "Cyberdeck"] },
 			{ title: "Journal", cards: ["Modbus", "Ethernet IP", "Profibus and profinet"] },
             { title: "Games", cards: ["Station master", "Rat infestation", "Espionage", "Novel", "Custom console"] },
