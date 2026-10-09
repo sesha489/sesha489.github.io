@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shortcut</title>
+    <style>
+		.icons {
+			width: 1040px;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			gap: 18px;
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		.icons img {
+			height: 48px;
+			width: 48px;
+			object-fit: contain;
+		}
+		
+		.icons a {
+			width: 70px;
+			text-decoration: none;
+			color: inherit;
+			text-align: center;
+			padding: 20px;
+			border: 2px solid #ccc;
+		}
+		
+		.popup-overlay {
+			display: none;            /* hidden by default */
+			position: fixed;
+			top: 0; left: 0;
+			width: 100%; height: 100%;
+			background: rgba(0, 0, 0, 0.5);
+			z-index: 100;
+		}
+		.popup-box {
+			position: absolute;
+			top: 50%; left: 50%;
+			transform: translate(-50%, -50%);
+			width: 280px;
+			background: white;
+			border-radius: 10px;
+			padding: 20px;
+			box-shadow: 0px 0px 15px #000000;
+		}
+		.popup-box h3 {
+			margin-top: 0;
+		}
+		.popup-close {
+			margin-top: 15px;
+			cursor: pointer;
+		}
+		
+		#root{
+			display: flex;
+			gap: 7.5px;
+			align-items: flex-start;
+			margin-left: 20px;
+		}
+        .box {
+            position: relative;
+            width: 190px;
+            height: stretch;
+            background-color: White;
+            padding: 10px;
+            color: black;
+            font-weight: bold;
+            cursor: move;
+        }
+        .card {
+            width: 180px;
+            //min-height: 20px;
+            background-color: White;
+            border-radius: 2px;
+            padding: 5px;
+            margin-top: 10px;
+            box-shadow: 0px 0px 2px 1px LightGrey;
+            color: black;
+            font-weight: normal;
+			font-size: 14px;
+        }
+		.calendar{
+			display:flex;
+			padding:15px;
+			padding-top:0px;
+			//border-radius:10px;
+			//box-shadow:0px 0px 10px #000000;
+			background:white;
+		}
+
+		.calendar-header{
+			display:flex;
+			justify-content:space-between;
+			align-items:center;
+			margin-bottom:10px;
+			font-weight:bold;
+		}
+
+		.calendar table{
+			width:245px;
+			border-collapse:collapse;
+		}
+
+		.calendar th,
+		.calendar td{
+			width:14.28%;
+			height:32px;
+			text-align:center;
+		}
+
+		.calendar th{
+			font-weight:bold;
+		}
+
+		.calendar td{
+			cursor:pointer;
+		}
+
+		.today{
+			background:#4CAF50;
+			color:white;
+			border-radius:50%;
+		}
+    </style>
+	<h1 style="margin: 0px; box-sizing: border-box; width: 100%; height: 80px; padding: 20px; background-color: WhiteSmoke; Color: DarkBlue;box-shadow:0px 10px 10px Grey;">Home</h1>
+</head>
+<body onclick="myClickEvent(event)" style="margin: 0px; font-family: Calibri;background-color: LightSteelBlue;">
+
+	<div>
+	<div style="margin: 20px; display: flex; gap: 10px; margin-bottom:10px;">
+		<div style="display:flex; flex-direction:column; background-color: White;">
+			<h3 style="margin-right: 20px; margin-left:20px; padding-bottom: 10px; border-bottom: 2px solid Blue; color: Blue">Quick Launch</h3>
+			<div class="icons">
+				<a href="https://www.google.co.in" target="_blank"><img src="https://lh3.googleusercontent.com/COxitqgJr1sJnIDe8-jiKhxDx1FrYbtRHKJ9z_hELisAlapwE9LUPh6fcXIfb5vwpbMl4xl9H9TRFPc5NOO8Sb3VSgIBrfRYvW6cU[...]
+				<a href="https://docs.google.com/document/" target="_blank"><img src="https://lh3.googleusercontent.com/1DECuhPQ1y2ppuL6tdEqNSuObIm_PW64w0mNhm3KGafi40acOJkc4nvsZnThoDKTH8gWyxAnipJmvCiszX8R6UAUu1Uy[...]
+				<a href="https://docs.google.com/spreadsheets/" target="_blank"><img src="https://lh3.googleusercontent.com/yCF7mTvXRF_EhDf7Kun5_-LMYTbD2IL-stx_D97EzpACfhpGjY_Frx8NZw63rSn2dME0v8-Im49Mh16htvPAGmEO[...]
+				<a href="https://drive.google.com" target="_blank"><img src="https://lh3.googleusercontent.com/rCwHBRBJV4wFiEIN_Mlboj94_TGJxyJtBh-MBFL4y1aZdO4hb7_Uc_PpXRyAoN7O9m_Zc1wSyp3H1vsnb829QE7t9KyGNJY9A1a3Q[...]
+				<a href="https://www.office.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft 365"><br>Microsoft</a>
+				<a href="https://office.com/launch/word" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Microsoft_Office_Word_%282019%E2%80%932025%29.svg" alt="Microsoft Word"><br>W[...]
+				<a href="https://office.com/launch/excel" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Microsoft_Office_Excel_%282019%E2%80%932025%29.svg" alt="Microsoft Excel"><b[...]
+				<a href="https://onedrive.live.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Microsoft_Office_OneDrive_%282019%E2%80%932025%29.svg" alt="Microsoft OneDrive"><b[...]
+				<a href="https://github.com/login" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub"><br>Github</a>
+				<a href="https://atlassian.com/" target="_blank"><img src="https://www.atlassian.com/favicon.ico" alt="Atlassian"><br>Atlassian</a>
+				<a href="https://www.pythonanywhere.com/login/" target="_blank"><img src="https://www.pythonanywhere.com/static/anywhere/images/PA-logo-large-icononly.png" alt="PythonAnywhere"><br>PyAny</a>
+				<a href="https://miro.com/app/dashboard/" target="_blank"><img src="https://cdn.simpleicons.org/miro/FFD02F" alt="Miro"><br>Miro</a>
+				<a href="https://chatgpt.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/ChatGPT-Logo.svg" alt="ChatGPT"><br>ChatGPT</a>
+				<a href="https://claude.ai" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b0/Claude_AI_symbol.svg" alt="Claude"><br>Claude</a>
+				<a href="https://tryhackme.com/login" target="_blank"><img src="https://tryhackme.com/favicon.ico" alt="TryHackMe"><br>THM</a>
+				<a onclick="openPopup(event)" style="height: 70px; cursor:pointer;">Open<br>Popup</a>
+				<div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+					<div style="font-size: 12px;">Note: sign in required in respective sites</div>
+					<div id="clickPos">0, 0</div>
+				</div>
+			</div>
+			
+			<div id="popupOverlay" class="popup-overlay" onclick="closePopup(event)">
+				<div class="popup-box" onclick="event.stopPropagation()">
+					<h3>Popup Title</h3>
+					<p>This is some dummy content inside the popup. Replace this later with whatever you need.</p>
+					<button class="popup-close" onclick="closePopup(event)">Close</button>
+				</div>
+			</div>
+		</div>
+		
+		<div id="calendar" class="calendar">
+			<div style="display:flex; flex-direction:column;">
+			<h3 style="padding-bottom: 10px; border-bottom: 2px solid Blue; color: Blue">Calender</h3>
+				<div class="calendar-header">
+					<button onclick="prevMonth()" style="border: none; outline: none; background: none; cursor: pointer;">&lt;</button>
+					<span id="monthYear"></span>
+					<button onclick="nextMonth()" style="border: none; outline: none; background: none; cursor: pointer;">&gt;</button>
+				</div>
+
+				<table id="calendarTable">
+				</table>
+				<div id="clock" style="text-align: center; font-size: 16px;"></div>
+			</div>
+		</div>
+		<script>
+			const monthNames =
+			[
+				"January","February","March","April",
+				"May","June","July","August",
+				"September","October","November","December"
+			];
+
+			let currentDate = new Date();
+
+			function drawCalendar()
+			{
+				const year = currentDate.getFullYear();
+				const month = currentDate.getMonth();
+
+				document.getElementById("monthYear").innerHTML =
+					monthNames[month] + " " + year;
+
+				const firstDay =
+					new Date(year, month, 1).getDay();
+
+				const daysInMonth =
+					new Date(year, month + 1, 0).getDate();
+
+				const today = new Date();
+
+				let html = "";
+
+				html += "<tr>";
+				html += "<th>Sun</th>";
+				html += "<th>Mon</th>";
+				html += "<th>Tue</th>";
+				html += "<th>Wed</th>";
+				html += "<th>Thu</th>";
+				html += "<th>Fri</th>";
+				html += "<th>Sat</th>";
+				html += "</tr>";
+
+				let day = 1;
+
+				for(let row=0; row<6; row++)
+				{
+					html += "<tr>";
+
+					for(let col=0; col<7; col++)
+					{
+						if(row==0 && col<firstDay)
+						{
+							html += "<td></td>";
+						}
+						else if(day>daysInMonth)
+						{
+							html += "<td></td>";
+						}
+						else
+						{
+							let className = "";
+
+							if(day==today.getDate()
+							&& month==today.getMonth()
+							&& year==today.getFullYear())
+							{
+								className = "today";
+							}
+
+							html +=
+							`<td class="${className}" onclick="dayClicked(${day})">${day}</td>`;
+
+							day++;
+						}
+					}
+
+					html += "</tr>";
+
+					if(day>daysInMonth)
+						break;
+				}
+
+				document.getElementById("calendarTable").innerHTML = html;
+			}
+
+			function prevMonth()
+			{
+				currentDate.setMonth(currentDate.getMonth()-1);
+				drawCalendar();
+			}
+
+			function nextMonth()
+			{
+				currentDate.setMonth(currentDate.getMonth()+1);
+				drawCalendar();
+			}
+
+			function dayClicked(day)
+			{
+				alert(day + " " +
+					  monthNames[currentDate.getMonth()] +
+					  " " +
+					  currentDate.getFullYear());
+			}
+			
+			function updateClock()
+			{
+				const now = new Date();
+
+				document.getElementById("clock").innerHTML =
+					now.toLocaleTimeString("en-IN", {
+						hour: "2-digit",
+						minute: "2-digit",
+						second: "2-digit",
+						hour12: false
+					});
+			}
+
+			updateClock();
+			setInterval(updateClock, 1000);
+
+			drawCalendar();
+		</script>
+		<div id="calendar" class="calendar" style="width: stretch;">
+			<div style="display:flex; flex-direction:column; width: stretch;">
+				<h3 style="padding-bottom: 10px; border-bottom: 2px solid Blue; color: Blue">Pending task list</h3>
+				<p style="height: stretch; margin-top: 0px; border: 2px solid #ccc; padding: 10px;">1. Valve template delivery.</p>
+			</div>
+		</div>
+	</div>
+
+    <div id="root"></div>
+
+    <script>
+		function openPopup(event) {
+			event.stopPropagation();
+			document.getElementById("popupOverlay").style.display = "block";
+		}
+
+		function closePopup(event) {
+			event.stopPropagation();
+			document.getElementById("popupOverlay").style.display = "none";
+		}
+
+        const lists = [
+            { title: "Automation", cards: ["PID Controller", "Modbus Tool", "Ethernet/IP Tool", "Profinet Tool", "Profibus Tool", "OPC UA Tool", "PLC software", "HMI/SCADA software", "3D SCADA", "EIP [...]
+            { title: "Embedded", cards: ["Scout robot V1", "Scout robot V2", "Modbus handheld device", "TCP stack", "COSMO custom lite OS", "Cyberdeck"] },
+			{ title: "Journal", cards: ["Modbus", "Ethernet IP", "Profibus and profinet"] },
+            { title: "Games", cards: ["Station master", "Rat infestation", "Espionage", "Novel", "Custom console"] },
+            { title: "PopUps", cards: ["Kings and Queens", "Espionage", "Novel"] }
+        ];
+
+        const root = document.getElementById("root");
+        lists.forEach((list, i) => {
+            const box = document.createElement("div");
+            box.id = "list" + (i + 1);
+            box.className = "box";
+            box.append(list.title);
+
+            list.cards.forEach((text, j) => {
+                const card = document.createElement("div");
+                card.id = box.id + "card" + (j + 1);
+                card.className = "card";
+                card.textContent = text;
+                box.appendChild(card);
+            });
+
+            root.appendChild(box);
+        });
+		
+		function myClickEvent(event){
+			let x = event.clientX;
+			let y = event.clientY;
+			let text = x + ", " + y;
+			document.getElementById("clickPos").innerHTML = text;
+		}
+    </script>
+	</div>
+</body>
+</html>
